@@ -437,7 +437,12 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>ScannerCam</title>
+        <meta
+          name="description"
+          content="ScannerCam uses your camera and machine learning to detect and identify objects in real time, right in your browser."
+        />
       </Head>
+      <h1 className="sr-only">ScannerCam</h1>
       <Suspense fallback={<div>Loading...</div>}>
         <div className="h-full lg:min-h-screen bg-[white] dark:bg-redblack lg:bg-[white] lg:dark:bg-redblack">
           <AppDesktopContainer>

@@ -19,7 +19,7 @@ interface LatestDetectionProps {
 const LatestDetection = ({ detectionClass }: LatestDetectionProps) => {
   return (
     <div
-      className="py-2 border rounded border-redlight text-center text-lg hover:bg-redlighter/30 cursor-pointer dark:hover:bg-redlight/10 dark:text-white capitalize"
+      className="py-2 border rounded border-redlight text-center text-lg dark:text-white capitalize"
       role="listitem"
     >
       {detectionClass}
@@ -60,6 +60,10 @@ const Dashboard: NextPage = () => {
     <>
       <Head>
         <title>Dashboard</title>
+        <meta
+          name="description"
+          content="View your latest ScannerCam detections and configure your detection frequency."
+        />
       </Head>
       <main className="min-h-[80vh] dark:bg-redblack flex items-center flex-col gap-y-4">
         <OnlyAuth>
@@ -74,9 +78,9 @@ const Dashboard: NextPage = () => {
           </p>
           <div className="flex flex-col lg:items-start lg:flex-row flex-wrap gap-x-4 gap-y-4 w-full px-4 lg:w-[1020px]">
             <div className="border rounded-lg border-gray-200 hover:border-gray-400 p-6 flex-1 dark:border-gray-600">
-              <h1 className="font-bold text-2xl dark:text-white">
+              <h2 className="font-bold text-2xl dark:text-white">
                 Latest detections
-              </h1>
+              </h2>
               <p className="dark:text-white text-sm font-medium">
                 Here you can see the latest detections made by your camera.
               </p>
@@ -92,9 +96,9 @@ const Dashboard: NextPage = () => {
               </div>
             </div>
             <div className="border rounded-lg border-gray-200 hover:border-gray-400 p-6 flex-1 dark:border-gray-600">
-              <h1 className="font-bold text-2xl dark:text-white">
+              <h2 className="font-bold text-2xl dark:text-white">
                 Configuration
-              </h1>
+              </h2>
               <div>
                 <label
                   htmlFor="phone"

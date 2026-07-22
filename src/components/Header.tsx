@@ -51,7 +51,7 @@ const Header = ({ t }: HeaderProps) => {
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-200 hover:text-white focus:outline-none">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-200 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-redcandydark">
                   <span className="sr-only">
                     {open ? 'Close main menu' : 'Open main menu'}
                   </span>
@@ -71,7 +71,7 @@ const Header = ({ t }: HeaderProps) => {
                       src={LogoApp}
                       alt="ScannerCam logo"
                     />
-                    <h1 className="text-reddark dark:text-redlight font-bold text-2xl hidden sm:block select-none">
+                    <h1 className="text-reddark dark:text-redlight font-bold text-2xl select-none sr-only sm:not-sr-only">
                       ScannerCam
                     </h1>
                   </Link>
@@ -125,17 +125,18 @@ const Header = ({ t }: HeaderProps) => {
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <span
+                          <button
+                            type="button"
                             onClick={handleSignOut}
                             className={classNames(
                               active
                                 ? 'bg-gray-100 dark:bg-redblack dark:text-redlight'
                                 : '',
-                              'block px-4 py-2 text-sm text-gray-700 dark:text-white cursor-pointer'
+                              'block w-full text-left px-4 py-2 text-sm text-gray-700 dark:text-white cursor-pointer'
                             )}
                           >
                             Sign out
-                          </span>
+                          </button>
                         )}
                       </Menu.Item>
                     </Menu.Items>

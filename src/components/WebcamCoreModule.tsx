@@ -22,6 +22,7 @@ const WebcamCoreModule = ({
       id="webcam"
       ref={webcamRef}
       muted={true}
+      aria-label="Live camera feed used for object detection"
       className={classNames('Webcam-module rounded-[2rem] lg:h-auto absolute', {
         'h-auto': portrait && isMobile,
         'h-screen': landscape && isMobile,

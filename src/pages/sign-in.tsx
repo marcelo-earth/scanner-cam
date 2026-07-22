@@ -42,15 +42,16 @@ const SignIn: NextPage = () => {
     <>
       <Head>
         <title>Sign in</title>
+        <meta name="description" content="Sign in to ScannerCam to save and view your detection history." />
       </Head>
       <main className="min-h-[80vh] flex justify-center items-center dark:bg-redblack">
         <div className="w-full h-full max-w-md md:h-auto">
           <div></div>
           <div>
             <div className="px-6 py-6 lg:px-8">
-              <h3 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white text-center">
+              <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white text-center">
                 {t('signin.title')}
-              </h3>
+              </h2>
               <p className="dark:text-white text-center mb-4">
                 {t('signin.description')}
               </p>

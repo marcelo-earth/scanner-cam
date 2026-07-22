@@ -10,7 +10,15 @@ interface OnlyAuthProps {
 
 const OnlyAuth = ({ children }: OnlyAuthProps) => {
   const user = useContext(AuthContext)
-  return <>{user !== null ? children : <div>Loading...</div>}</>
+  return (
+    <>
+      {user !== null ? (
+        children
+      ) : (
+        <div role="status">Loading...</div>
+      )}
+    </>
+  )
 }
 
 export default OnlyAuth

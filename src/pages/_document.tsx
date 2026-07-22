@@ -6,7 +6,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export default function Document() {
   return (
-    <Html lang={i18next.language}>
+    <Html lang={i18next.language || 'en'}>
       <Head />
       <link rel="manifest" href="/manifest.json" />
       <link rel="apple-touch-icon" href="/icon.png" />
