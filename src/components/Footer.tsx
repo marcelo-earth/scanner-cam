@@ -29,7 +29,7 @@ function Footer({ t }: FooterProps) {
           </li>
           <li>
             <a
-              href="https://github.com/360macky/scanner-cam"
+              href="https://github.com/marcelo-earth/scanner-cam"
               className="mr-4 hover:underline md:mr-6"
               target="_blank"
               rel="noreferrer"
