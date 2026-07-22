@@ -11,6 +11,7 @@ const About: NextPage = () => {
     <>
       <Head>
         <title>{t('about')} ScannerCam</title>
+        <meta name="description" content={t('about.description')} />
       </Head>
       <Page>
         <article className="p-8">
